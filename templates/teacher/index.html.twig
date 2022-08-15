@@ -1,20 +1,51 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello TeacherController!{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+    <div class="container col-md-8 text-center mt-3">
+<table class="table table-light">
+    <tr>
+        <th colspan="3">
+            <h1 class="text text-primary">Teacher List</h1>
+        </th>
+        <th>
+            <a class="text-decoration-none" href="{{ path('teacher_add') }}">
+                <img src="{{ asset('') }}" width="40" height="40">
+            </a>
+        </th>
+    </tr>
+    <tr>
+        <th class="text text-success">Teacher Id</th>
+        <th class="text text-success">Teacher Name</th>
+        <th class="text text-success">Teacher Age</th>
+        <th class="text text-success">Teacher Gender</th>
+        <th class="text text-success">Teacher image </th>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'F:/HW/BT Semester 3/WEBG301/ASM_GCH1003/WEBG301-GCH1003/StudentManagement/src/Controller/TeacherController.php'|file_link(0) }}">src/Controller/TeacherController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'F:/HW/BT Semester 3/WEBG301/ASM_GCH1003/WEBG301-GCH1003/StudentManagement/templates/teacher/index.html.twig'|file_link(0) }}">templates/teacher/index.html.twig</a></code></li>
-    </ul>
+    </tr>
+    {% for teacher in teachers %}
+        <tr>
+            <td>{{ teacher.id }}</td>
+            <td>{{ teacher.name }}</td>
+            <td>
+                <a class="text-decoration-none" href="{{ path('teacher_detail', {'id' : teacher.id }) }}">
+                    <img src="{{ teacher.image }}" width="100" height="100">
+                </a>
+           </td>
+            <td>
+                <a class="text-decoration-none" href="{{ path('teacher_detail', {'id' : teacher.id }) }}">
+                    <img src="{{ asset('') }}" width="40" height="40">
+                </a>
+                <a class="text-decoration-none" href="{{ path('teacher_edit', {'id' : teacher.id }) }}">
+                    <img src="{{ asset('') }}" width="40" height="40">
+                </a>
+                <a class="text-decoration-none" href="{{ path('teacher_delete', {'id' : teacher.id }) }}"
+                onclick="return confirm('Are you sure to delete this book ?');"
+                >
+                    <img src="{{ asset('') }}" width="40" height="40">
+                </a>
+            </td>
+        </tr>
+    {% endfor %}
+</table>
 </div>
 {% endblock %}
