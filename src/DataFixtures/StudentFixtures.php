@@ -15,5 +15,3 @@ class StudentFixtures extends Fixture
         $manager->flush();
     }
 }
-///NoTHING FASHJS///
-////Something else///
