@@ -36,72 +36,72 @@ class Teacher
         return $this->id;
     }
 
-    public function getTeacherName(): ?string
+    public function getTeacher_name(): ?string
     {
         return $this->Teacher_name;
     }
 
-    public function setTeacherName(string $Teacher_name): self
+    public function setTeacher_name(string $Teacher_name): self
     {
         $this->Teacher_name = $Teacher_name;
 
         return $this;
     }
 
-    public function getTeacherAge(): ?int
+    public function getTeacher_age(): ?int
     {
         return $this->Teacher_age;
     }
 
-    public function setTeacherAge(?int $Teacher_age): self
+    public function setTeacher_age(?int $Teacher_age): self
     {
         $this->Teacher_age = $Teacher_age;
 
         return $this;
     }
 
-    public function getTeacherGender(): ?string
+    public function getTeacher_gender(): ?string
     {
         return $this->Teacher_gender;
     }
 
-    public function setTeacherGender(?string $Teacher_gender): self
+    public function setTeacher_gender(?string $Teacher_gender): self
     {
         $this->Teacher_gender = $Teacher_gender;
 
         return $this;
     }
 
-    public function getTeacherImage(): ?string
+    public function getTeacher_image(): ?string
     {
         return $this->Teacher_image;
     }
 
-    public function setTeacherImage(?string $Teacher_image): self
+    public function setTeacher_image(?string $Teacher_image): self
     {
         $this->Teacher_image = $Teacher_image;
 
         return $this;
     }
 
-    public function getTeacherEmail(): ?string
+    public function getTeacher_email(): ?string
     {
         return $this->Teacher_email;
     }
 
-    public function setTeacherEmail(string $Teacher_email): self
+    public function setTeacher_email(string $Teacher_email): self
     {
         $this->Teacher_email = $Teacher_email;
 
         return $this;
     }
 
-    public function getTeacherPass(): ?string
+    public function getTeacher_pass(): ?string
     {
         return $this->Teacher_pass;
     }
 
-    public function setTeacherPass(string $Teacher_pass): self
+    public function setTeacher_pass(string $Teacher_pass): self
     {
         $this->Teacher_pass = $Teacher_pass;
 

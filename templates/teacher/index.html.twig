@@ -10,39 +10,41 @@
         </th>
         <th>
             <a class="text-decoration-none" href="{{ path('teacher_add') }}">
-                <img src="{{ asset('') }}" width="40" height="40">
+                <button type="button" class="btn btn-primary" >Add New</button>
             </a>
         </th>
     </tr>
     <tr>
-        <th class="text text-success">Teacher Id</th>
-        <th class="text text-success">Teacher Name</th>
-        <th class="text text-success">Teacher Age</th>
-        <th class="text text-success">Teacher Gender</th>
-        <th class="text text-success">Teacher image </th>
+
+        <th class="text text-success">Id</th>
+        <th class="text text-success">Name</th>
+        <th class="text text-success">Image </th>
+        <th class="text text-info"> Function </th>
 
     </tr>
     {% for teacher in teachers %}
         <tr>
             <td>{{ teacher.id }}</td>
-            <td>{{ teacher.name }}</td>
+            <td>{{ teacher.Teacher_name }}</td> 
             <td>
                 <a class="text-decoration-none" href="{{ path('teacher_detail', {'id' : teacher.id }) }}">
-                    <img src="{{ teacher.image }}" width="100" height="100">
+                    <img src="{{ teacher.Teacher_image }}" width="100" height="100">
                 </a>
            </td>
             <td>
+            <div class="btn-group">
                 <a class="text-decoration-none" href="{{ path('teacher_detail', {'id' : teacher.id }) }}">
-                    <img src="{{ asset('') }}" width="40" height="40">
+                    <button type="button" class="btn btn-primary">Detail</button>             
                 </a>
                 <a class="text-decoration-none" href="{{ path('teacher_edit', {'id' : teacher.id }) }}">
-                    <img src="{{ asset('') }}" width="40" height="40">
+                    <button type="button" class="btn btn-success">Edit</button>   
                 </a>
-                <a class="text-decoration-none" href="{{ path('teacher_delete', {'id' : teacher.id }) }}"
+    	        <a class="text-decoration-none" href="{{ path('teacher_delete', {'id' : teacher.id }) }}"
                 onclick="return confirm('Are you sure to delete this book ?');"
                 >
-                    <img src="{{ asset('') }}" width="40" height="40">
+                    <button type="button" class="btn btn-warning">Delete</button>   
                 </a>
+            </div>
             </td>
         </tr>
     {% endfor %}
