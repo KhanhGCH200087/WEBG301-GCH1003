@@ -51,8 +51,9 @@ class TeacherController extends AbstractController
             $manager = $managerRegistry->getManager();
             $manager -> remove($teacher);
             $manager ->flush();
-            $this->addFlash('Info', 'Delete book successfully');
+            $this->addFlash('Info', 'Delete teacher successfully');
         }
+        return $this->redirectToRoute('teacher_index');
     }
 
     #[Route('/add', name:'teacher_add')]
@@ -69,7 +70,6 @@ class TeacherController extends AbstractController
             $this->addFlash('Info', 'New teacher is added successfully');
             return $this->redirectToRoute('teacher_index');
         }
-
         return $this->renderForm('teacher/add.html.twig', 
         [
             'teacherForm' => $form

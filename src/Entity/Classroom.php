@@ -27,36 +27,36 @@ class Classroom
         return $this->id;
     }
 
-    public function getClassName(): ?string
+    public function getClass_name(): ?string
     {
         return $this->Class_name;
     }
 
-    public function setClassName(string $Class_name): self
+    public function setClass_name(string $Class_name): self
     {
         $this->Class_name = $Class_name;
 
         return $this;
     }
 
-    public function getClassDescription(): ?string
+    public function getClass_description(): ?string
     {
         return $this->Class_description;
     }
 
-    public function setClassDescription(?string $Class_description): self
+    public function setClass_description(?string $Class_description): self
     {
         $this->Class_description = $Class_description;
 
         return $this;
     }
 
-    public function getClassQuantity(): ?int
+    public function getClass_quantity(): ?int
     {
         return $this->Class_quantity;
     }
 
-    public function setClassQuantity(?int $Class_quantity): self
+    public function setClass_quantity(?int $Class_quantity): self
     {
         $this->Class_quantity = $Class_quantity;
 
